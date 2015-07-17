@@ -4,6 +4,8 @@ project(hello-world)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
+include(ObsPluginHelpers)
+
 find_package(Libobs REQUIRED)
 
 set(hello-world_SOURCES
