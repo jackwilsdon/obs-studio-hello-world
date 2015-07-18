@@ -20,4 +20,5 @@ add_library(hello-world MODULE
 target_link_libraries(hello-world
 	${hello-world_LIBRARIES})
 
-install_external_plugin_data(hello-world data)
+install_external_plugin_arch_data(hello-world data)
+install_external_plugin(hello-world)
