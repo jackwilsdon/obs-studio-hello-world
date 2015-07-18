@@ -11,10 +11,13 @@ find_package(Libobs REQUIRED)
 set(hello-world_SOURCES
 	hello-world.c)
 
+set(hello-world_LIBRARIES
+	${LIBOBS_LIBRARIES})
+
 add_library(hello-world MODULE
 	${hello-world_SOURCES})
 
 target_link_libraries(hello-world
-	libobs)
+	${hello-world_LIBRARIES})
 
 install_external_plugin_data(hello-world data)
